@@ -25,3 +25,5 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 
+let humanScore = 0;
+let computerScore = 0;
