@@ -14,6 +14,14 @@ function getComputerChoice() {
    
 }
 
+function getHumanChoice()
+{
+    let humanChoice = prompt("Enter your choice: ", "rock");
+    return humanChoice;
+}
 
+
+const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
+
 
