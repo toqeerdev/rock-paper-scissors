@@ -1,3 +1,27 @@
+function getComputerChoice(max) {
+ let computerChoice = Math.floor(Math.random() * max);
+
+ if (computerChoice === 0) {
+    return "rock";
+ }
+ else if (computerChoice === 1) {
+    return "paper";
+ }
+ else {
+    return "scissors";
+ } 
+}
+
+
+function getHumanChoice()
+{
+    let humanChoice = prompt("Enter your choice: ", "Rock");
+    return humanChoice;
+}
+
+
+function playGame() { 
+
 function playRound(humanChoice, computerChoice) {
    humanChoice = humanChoice.toLowerCase();
 
@@ -25,37 +49,54 @@ function playRound(humanChoice, computerChoice) {
       console.log("You win! Scissors beat paper.");
       humanScore += 5;
    }
-   else if (humanChoice === computerChoice) {
+   else {
       console.log("It's a draw.");
    }
-}
-
-
-function getComputerChoice(max) {
- let computerChoice = Math.floor(Math.random() * max);
-
- if (computerChoice === 0) {
-    return "rock";
- }
- else if (computerChoice === 1) {
-    return "paper";
- }
- else {
-    return "scissors";
- }
-   
-}
-
-function getHumanChoice()
-{
-    let humanChoice = prompt("Enter your choice: ", "Rock");
-    return humanChoice;
 }
 
 let humanScore = 0;
 let computerScore = 0;
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice(3);
 
 playRound(humanSelection, computerSelection);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice(3);
+playRound(humanSelection, computerSelection);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice(3);
+playRound(humanSelection, computerSelection);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice(3);
+playRound(humanSelection, computerSelection);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice(3);
+playRound(humanSelection, computerSelection);
+
+}
+
+
+let humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice(3);
+
+playGame();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
