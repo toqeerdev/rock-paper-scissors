@@ -19,6 +19,19 @@ function getHumanChoice()
     return humanChoice;
 }
 
+function printResults(humanScore, computerScore) {
+   if (humanScore > computerScore) {
+      return "You won the game.\nYour score: " + humanScore + "." + "\nComputer score: " + computerScore + "."
+   }
+   else if (humanScore < computerScore) {
+      return "You lost the game.\nYour score: " + humanScore + "." + "\nComputer score: " + computerScore + "."
+   }
+   else {
+      return "The game is a tie.\nYour score: " + humanScore + "." + "\nComputer score: " + computerScore + "."
+   }
+
+}
+
 
 function playGame() { 
 
@@ -76,6 +89,7 @@ humanSelection = getHumanChoice();
 computerSelection = getComputerChoice(3);
 playRound(humanSelection, computerSelection);
 
+console.log(printResults(humanScore, computerScore));
 }
 
 
