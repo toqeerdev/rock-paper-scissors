@@ -35,7 +35,7 @@ function printResults(humanScore, computerScore) {
 
 function playGame() { 
 
-function playRound(humanChoice, computerChoice) {
+function playRound(humanChoice = getHumanChoice(), computerChoice = getComputerChoice(3)) {
    humanChoice = humanChoice.toLowerCase();
 
    if (humanChoice === "rock" && computerChoice === "paper") {
@@ -70,31 +70,12 @@ function playRound(humanChoice, computerChoice) {
 let humanScore = 0;
 let computerScore = 0;
 
-
-playRound(humanSelection, computerSelection);
-
-humanSelection = getHumanChoice();
-computerSelection = getComputerChoice(3);
-playRound(humanSelection, computerSelection);
-
-humanSelection = getHumanChoice();
-computerSelection = getComputerChoice(3);
-playRound(humanSelection, computerSelection);
-
-humanSelection = getHumanChoice();
-computerSelection = getComputerChoice(3);
-playRound(humanSelection, computerSelection);
-
-humanSelection = getHumanChoice();
-computerSelection = getComputerChoice(3);
-playRound(humanSelection, computerSelection);
+for (i = 0; i < 5; i++) {
+playRound();
+}
 
 console.log(printResults(humanScore, computerScore));
 }
-
-
-let humanSelection = getHumanChoice();
-let computerSelection = getComputerChoice(3);
 
 playGame();
 
