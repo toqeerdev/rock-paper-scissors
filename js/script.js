@@ -18,3 +18,6 @@ function getHumanChoice() {
 
 const computerChoice = getComputerChoice();
 const humanChoice = getHumanChoice();
+
+let humanScore = 0;
+let computerScore = 0;
