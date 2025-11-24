@@ -1,5 +1,5 @@
 function getComputerChoice() {
-    let computerChoice = Math.floor(Math.random() * 3)
+    const computerChoice = Math.floor(Math.random() * 3)
     if (computerChoice === 0) {
         return "rock";
     }
@@ -14,6 +14,8 @@ function getComputerChoice() {
 function getHumanChoice() {
     return prompt("Enter your choice: ");
 }
+
+function playGame() {
 
 function playRound(caseInsensitiveHumanChoice, computerChoice) {
     let humanChoice = caseInsensitiveHumanChoice.toLowerCase();
@@ -47,13 +49,20 @@ function playRound(caseInsensitiveHumanChoice, computerChoice) {
     }
 }
 
-const computerSelection = getComputerChoice();
-const humanSelection = getHumanChoice();
 
 let humanScore = 0;
 let computerScore = 0;
 
+for (i = 0; i < 5; i++) {
+const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
 playRound(humanSelection, computerSelection);
+}
 
-console.log(humanScore, computerScore);
+}
+
+playGame();
+
+
+
 
