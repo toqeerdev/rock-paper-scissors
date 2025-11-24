@@ -25,7 +25,6 @@ function declareResults(humanScore, computerScore) {
     else {
         console.log("The game is a tie. Results are: " + "\nHuman Score: " + humanScore + "\nComputer Score: " + computerScore);
     }
-
 }
 
 function playGame() {
@@ -62,7 +61,6 @@ function playRound(caseInsensitiveHumanChoice, computerChoice) {
     }
 }
 
-
 let humanScore = 0;
 let computerScore = 0;
 
@@ -73,11 +71,6 @@ playRound(humanSelection, computerSelection);
 }
 
 declareResults(humanScore, computerScore);
-
 }
 
 playGame();
-
-
-
-
