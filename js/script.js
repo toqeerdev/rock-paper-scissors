@@ -15,6 +15,19 @@ function getHumanChoice() {
     return prompt("Enter your choice: ");
 }
 
+function declareResults(humanScore, computerScore) {
+    if (humanScore > computerScore) {
+        console.log("You won the game! Results are: " + "\nHuman Score: " + humanScore + "\nComputer Score: " + computerScore);
+    }
+    else if (humanScore < computerScore) {
+        console.log("You lost the game! Results are: " + "\nHuman Score: " + humanScore + "\nComputer Score: " + computerScore);
+    }
+    else {
+        console.log("The game is a tie. Results are: " + "\nHuman Score: " + humanScore + "\nComputer Score: " + computerScore);
+    }
+
+}
+
 function playGame() {
 
 function playRound(caseInsensitiveHumanChoice, computerChoice) {
@@ -58,6 +71,8 @@ const computerSelection = getComputerChoice();
 const humanSelection = getHumanChoice();
 playRound(humanSelection, computerSelection);
 }
+
+declareResults(humanScore, computerScore);
 
 }
 
